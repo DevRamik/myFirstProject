@@ -19,7 +19,7 @@ public class Main {
         rating.addPoint("Zenit", 5);
         rating.addPoint("Spartak", 3);
 
-        rating.getWinner();
+        rating.sortRating();
 
     }
 

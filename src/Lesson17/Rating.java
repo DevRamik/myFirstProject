@@ -2,6 +2,7 @@ package Lesson17;
 
 import java.util.HashMap;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class Rating {
     private HashMap<String, Integer> rating = new HashMap<>();
@@ -42,5 +43,15 @@ public class Rating {
             }
         }
         System.out.println(teamName + " Rating: " + "-------" + max);
+    }
+
+    public void sortRating() {
+        TreeMap<String, Integer> sortedRating = new TreeMap<>();
+        sortedRating.putAll(rating);
+        Set<String> teams = sortedRating.keySet();
+        for (String currentTeam : teams) {
+            System.out.println(currentTeam + "-------" + sortedRating.get(currentTeam));
+
+        }
     }
 }
